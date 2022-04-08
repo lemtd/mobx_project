@@ -8,10 +8,15 @@ class Timer extends StatelessWidget {
     return Container(
       color: Colors.purple[100],
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             'Timer',
             style: TextStyle(fontSize: 20),
+          ),
+          Text(
+            '25:00',
+            style: TextStyle(fontSize: 75),
           ),
         ],
       ),
