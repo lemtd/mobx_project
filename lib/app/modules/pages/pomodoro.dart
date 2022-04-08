@@ -16,12 +16,9 @@ class Pomodoro extends StatelessWidget {
             height: 20,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InputTime(initial_time: 5, alert: 'Trabalho'),
-              SizedBox(
-                width: 20,
-              ),
               InputTime(initial_time: 5, alert: 'Descanso'),
             ],
           ),
