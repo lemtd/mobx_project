@@ -16,9 +16,9 @@ class InputTime extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ButtonWidget(widget: Icon(Icons.arrow_drop_up), color:Color(0xFFAB47BC),),
+            ButtonWidget(widget: Icon(Icons.arrow_drop_up), color:Color(0xFFAB47BC), width: MediaQuery.of(context).size.shortestSide * 0.13, height: MediaQuery.of(context).size.shortestSide * 0.13,),
             Text('${this.initial_time}'),
-            ButtonWidget(widget: Icon(Icons.arrow_drop_down), color:Color(0xFFAB47BC),),
+            ButtonWidget(widget: Icon(Icons.arrow_drop_down), color:Color(0xFFAB47BC), width: MediaQuery.of(context).size.shortestSide * 0.13, height: MediaQuery.of(context).size.shortestSide * 0.13,),
           ],
         ),
       ],
