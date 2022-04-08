@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobx_project/app/modules/components/button_widget.dart';
 
 class InputTime extends StatelessWidget {
   final int initial_time;
@@ -15,23 +16,9 @@ class InputTime extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {},
-              child: Icon(Icons.arrow_drop_up),
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                primary: Colors.purple[400],
-              ),
-            ),
+            ButtonWidget(widget: Icon(Icons.arrow_drop_up), color:Color(0xFFAB47BC),),
             Text('${this.initial_time}'),
-            ElevatedButton(
-              onPressed: () {},
-              child: Icon(Icons.arrow_drop_down),
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                primary: Colors.purple[400],
-              ),
-            )
+            ButtonWidget(widget: Icon(Icons.arrow_drop_down), color:Color(0xFFAB47BC),),
           ],
         ),
       ],
