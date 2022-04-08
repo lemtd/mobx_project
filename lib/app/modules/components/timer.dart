@@ -2,12 +2,15 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:mobx_project/app/modules/components/button_widget.dart';
+import 'package:mobx_project/app/modules/home/home_store.dart';
+import 'package:provider/provider.dart';
 
 class Timer extends StatelessWidget {
   const Timer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final store = Provider.of<HomeStore>(context);
     return Container(
       color: Colors.purple[100],
       child: Column(
@@ -45,6 +48,7 @@ class Timer extends StatelessWidget {
                 color: Color(0xFFAB47BC),
                 width: MediaQuery.of(context).size.shortestSide * 0.3,
                 height: MediaQuery.of(context).size.shortestSide * 0.09,
+                onClick: store.decrementTimeToJob,
               ),
               ButtonWidget(
                 widget: Row(
@@ -64,6 +68,7 @@ class Timer extends StatelessWidget {
                 color: Color(0xFFAB47BC),
                 width: MediaQuery.of(context).size.shortestSide * 0.3,
                 height: MediaQuery.of(context).size.shortestSide * 0.09,
+                onClick: store.decrementTimeToJob,
               ),
             ],
           ),
@@ -85,6 +90,7 @@ class Timer extends StatelessWidget {
             color: Color(0xFFAB47BC),
             width: MediaQuery.of(context).size.shortestSide * 0.3,
             height: MediaQuery.of(context).size.shortestSide * 0.09,
+            onClick: store.decrementTimeToJob,
           ),
         ],
       ),

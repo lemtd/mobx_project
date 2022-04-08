@@ -5,17 +5,18 @@ class ButtonWidget extends StatelessWidget {
   final Color color;
   final double width;
   final double height;
+  final Function onClick;
 
-  const ButtonWidget({Key? key, required this.widget, required this.color, required this.width, required this.height})
+  const ButtonWidget({Key? key, required this.widget, required this.color, required this.width, required this.height, required this.onClick})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: this.width,
       height: this.height,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: this.onClick(),
         child: this.widget,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
