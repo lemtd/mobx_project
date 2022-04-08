@@ -25,7 +25,7 @@ class Timer extends StatelessWidget {
             height: 75,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ButtonWidget(
                 widget: Row(
@@ -36,18 +36,15 @@ class Timer extends StatelessWidget {
                       'Start',
                       style: TextStyle(
                         fontSize:
-                            MediaQuery.of(context).size.shortestSide * 0.04,
+                            MediaQuery.of(context).size.shortestSide * 0.03,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
                   ],
                 ),
                 color: Color(0xFFAB47BC),
-                width: MediaQuery.of(context).size.shortestSide * 0.35,
-                height: MediaQuery.of(context).size.shortestSide * 0.1,
-              ),
-              SizedBox(
-                width: 35,
+                width: MediaQuery.of(context).size.shortestSide * 0.3,
+                height: MediaQuery.of(context).size.shortestSide * 0.09,
               ),
               ButtonWidget(
                 widget: Row(
@@ -57,18 +54,38 @@ class Timer extends StatelessWidget {
                     Text(
                       'Stop',
                       style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.shortestSide * 0.04,
+                        fontSize:
+                            MediaQuery.of(context).size.shortestSide * 0.03,
                         color: Color.fromARGB(255, 255, 255, 255),
                       ),
                     ),
                   ],
                 ),
                 color: Color(0xFFAB47BC),
-                width: MediaQuery.of(context).size.shortestSide * 0.35,
-                height: MediaQuery.of(context).size.shortestSide * 0.1,
+                width: MediaQuery.of(context).size.shortestSide * 0.3,
+                height: MediaQuery.of(context).size.shortestSide * 0.09,
               ),
             ],
-          )
+          ),
+          SizedBox(height: 30,),
+          ButtonWidget(
+            widget: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.refresh),
+                Text(
+                  'Restart',
+                  style: TextStyle(
+                    fontSize: MediaQuery.of(context).size.shortestSide * 0.03,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                ),
+              ],
+            ),
+            color: Color(0xFFAB47BC),
+            width: MediaQuery.of(context).size.shortestSide * 0.3,
+            height: MediaQuery.of(context).size.shortestSide * 0.09,
+          ),
         ],
       ),
     );
