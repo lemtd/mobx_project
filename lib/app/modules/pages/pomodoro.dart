@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobx_project/app/modules/components/input_time.dart';
+import 'package:mobx_project/app/modules/components/timer.dart';
 
 class Pomodoro extends StatelessWidget {
   const Pomodoro({Key? key}) : super(key: key);
@@ -9,9 +10,9 @@ class Pomodoro extends StatelessWidget {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text('Pomodoro'),
+          Timer(),
           SizedBox(
             height: 20,
           ),
