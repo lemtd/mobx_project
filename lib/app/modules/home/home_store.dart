@@ -11,21 +11,27 @@ abstract class HomeStoreBase with Store {
   @observable
   int timeToRest = 5;
 
+  @action
   void incrementTimeToJob() {
     timeToJob++;
-    print(timeToJob);
+    print("job: $timeToJob");
   }
 
+  @action
   void decrementTimeToJob() {
     timeToJob--;
-    print(timeToJob);
-  }
-  
-  void incrementTimeToRest() {
-    timeToJob++;
+    print("job: $timeToJob");
   }
 
+  @action
+  void incrementTimeToRest() {
+    timeToRest++;
+    print("rest: $timeToRest");
+  }
+
+  @action
   void decrementTimeToRest() {
-    timeToJob--;
+    timeToRest--;
+    print("rest: $timeToRest");
   }
 }

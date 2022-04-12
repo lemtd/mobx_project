@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:mobx_project/app/modules/components/button_widget.dart';
 import 'package:mobx_project/app/modules/home/home_store.dart';
 import 'package:provider/provider.dart';
 
 class InputTime extends StatelessWidget {
   final int initial_time;
   final String alert;
+  final bool restOrJob;
 
-  const InputTime({Key? key, required this.initial_time, required this.alert})
+  const InputTime(
+      {Key? key,
+      required this.initial_time,
+      required this.alert,
+      required this.restOrJob})
       : super(key: key);
 
   @override
@@ -20,9 +24,31 @@ class InputTime extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ButtonWidget(widget: Icon(Icons.arrow_drop_up), color:Color(0xFFAB47BC), width: MediaQuery.of(context).size.shortestSide * 0.13, height: MediaQuery.of(context).size.shortestSide * 0.13, onClick: store.decrementTimeToJob,),
+            ElevatedButton(
+              onPressed: this.restOrJob
+                  ? store.incrementTimeToJob
+                  : store.incrementTimeToRest,
+              child: Icon(Icons.arrow_drop_up),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                primary: Color(0xFFAB47BC),
+              ),
+            ),
             Text('${this.initial_time}'),
-            ButtonWidget(widget: Icon(Icons.arrow_drop_down), color:Color(0xFFAB47BC), width: MediaQuery.of(context).size.shortestSide * 0.13, height: MediaQuery.of(context).size.shortestSide * 0.13, onClick: store.incrementTimeToRest,),
+            ElevatedButton(
+              onPressed: this.restOrJob
+                  ? store.decrementTimeToJob
+                  : store.decrementTimeToRest,
+              child: Icon(Icons.arrow_drop_down),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                primary: Color(0xFFAB47BC),
+              ),
+            ),
           ],
         ),
       ],

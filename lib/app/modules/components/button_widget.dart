@@ -5,9 +5,15 @@ class ButtonWidget extends StatelessWidget {
   final Color color;
   final double width;
   final double height;
-  final Function onClick;
+  final Function onPressed;
 
-  const ButtonWidget({Key? key, required this.widget, required this.color, required this.width, required this.height, required this.onClick})
+  const ButtonWidget(
+      {Key? key,
+      required this.widget,
+      required this.color,
+      required this.width,
+      required this.height,
+      required this.onPressed})
       : super(key: key);
 
   @override
@@ -16,7 +22,7 @@ class ButtonWidget extends StatelessWidget {
       width: this.width,
       height: this.height,
       child: ElevatedButton(
-        onPressed: this.onClick(),
+        onPressed: this.onPressed(),
         child: this.widget,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(

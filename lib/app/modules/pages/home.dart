@@ -4,11 +4,12 @@ import 'package:mobx_project/app/modules/components/timer.dart';
 import 'package:mobx_project/app/modules/home/home_store.dart';
 import 'package:provider/provider.dart';
 
-class Pomodoro extends StatelessWidget {
-  const Pomodoro({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final store = Provider.of<HomeStore>(context);
     return MultiProvider(
       providers: [Provider<HomeStore>(create: (_) => HomeStore())],
       child: Scaffold(
@@ -24,8 +25,16 @@ class Pomodoro extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  InputTime(initial_time: 5, alert: 'Trabalho'),
-                  InputTime(initial_time: 5, alert: 'Descanso'),
+                  InputTime(
+                    initial_time: store.timeToJob,
+                    alert: 'Trabalho',
+                    restOrJob: true,
+                  ),
+                  InputTime(
+                    initial_time: store.timeToRest,
+                    alert: 'Descanso',
+                    restOrJob: false,
+                  ),
                 ],
               ),
             ),

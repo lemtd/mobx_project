@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:mobx_project/app/modules/components/button_widget.dart';
 import 'package:mobx_project/app/modules/home/home_store.dart';
@@ -48,7 +46,7 @@ class Timer extends StatelessWidget {
                 color: Color(0xFFAB47BC),
                 width: MediaQuery.of(context).size.shortestSide * 0.3,
                 height: MediaQuery.of(context).size.shortestSide * 0.09,
-                onClick: store.decrementTimeToJob,
+                onPressed: () {},
               ),
               ButtonWidget(
                 widget: Row(
@@ -68,11 +66,13 @@ class Timer extends StatelessWidget {
                 color: Color(0xFFAB47BC),
                 width: MediaQuery.of(context).size.shortestSide * 0.3,
                 height: MediaQuery.of(context).size.shortestSide * 0.09,
-                onClick: store.decrementTimeToJob,
+                onPressed: () {},
               ),
             ],
           ),
-          SizedBox(height: 30,),
+          SizedBox(
+            height: 30,
+          ),
           ButtonWidget(
             widget: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -90,7 +90,7 @@ class Timer extends StatelessWidget {
             color: Color(0xFFAB47BC),
             width: MediaQuery.of(context).size.shortestSide * 0.3,
             height: MediaQuery.of(context).size.shortestSide * 0.09,
-            onClick: store.decrementTimeToJob,
+            onPressed: () {},
           ),
         ],
       ),
