@@ -22,6 +22,7 @@ class InputTime extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(this.alert),
+        SizedBox(height: 10,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -37,7 +38,10 @@ class InputTime extends StatelessWidget {
                 primary: Color(0xFFAB47BC),
               ),
             ),
-            Text('${this.initial_time}'),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text('${this.initial_time} min'),
+            ),
             ElevatedButton(
               onPressed: this.restOrJob
                   ? store.decrementTimeToJob
