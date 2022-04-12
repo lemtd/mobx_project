@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobx_project/app/modules/components/button_widget.dart';
-import 'package:mobx_project/app/modules/home/home_store.dart';
+import 'package:mobx_project/app/modules/pages/home/components/button_widget.dart';
+import 'package:mobx_project/app/modules/pages/home/home_store.dart';
 import 'package:provider/provider.dart';
 
 class Timer extends StatelessWidget {

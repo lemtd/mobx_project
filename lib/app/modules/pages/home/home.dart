@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx_project/app/modules/components/input_time.dart';
-import 'package:mobx_project/app/modules/components/timer.dart';
-import 'package:mobx_project/app/modules/home/home_store.dart';
+import 'package:mobx_project/app/modules/pages/home/components/input_time.dart';
+import 'package:mobx_project/app/modules/pages/home/components/timer.dart';
+import 'package:mobx_project/app/modules/pages/home/home_store.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {

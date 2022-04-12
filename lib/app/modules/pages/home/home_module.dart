@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:mobx_project/app/modules/pages/home.dart';
+import 'package:mobx_project/app/modules/pages/home/home.dart';
 import 'home_store.dart';
 
 // import 'home_page.dart';

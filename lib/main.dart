@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'app/app_module.dart';
 import 'app/app_widget.dart';
-import 'app/modules/home/home_store.dart';
+import 'app/modules/pages/home/home_store.dart';
 
 void main() => runApp(
       MultiProvider(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobx_project/app/modules/home/home_store.dart';
+import 'package:mobx_project/app/modules/pages/home/home_store.dart';
 import 'package:provider/provider.dart';
 
 class InputTime extends StatelessWidget {
