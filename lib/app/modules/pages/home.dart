@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_project/app/modules/components/input_time.dart';
 import 'package:mobx_project/app/modules/components/timer.dart';
 import 'package:mobx_project/app/modules/home/home_store.dart';
@@ -10,19 +11,18 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<HomeStore>(context);
-    return MultiProvider(
-      providers: [Provider<HomeStore>(create: (_) => HomeStore())],
-      child: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: Timer(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(30),
-              child: Row(
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            child: Timer(),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 40),
+            child: Observer(
+              builder: (_) => Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InputTime(
@@ -38,8 +38,8 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

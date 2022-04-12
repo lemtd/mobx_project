@@ -19,10 +19,11 @@ class InputTime extends StatelessWidget {
     final store = Provider.of<HomeStore>(context);
 
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(this.alert),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
               onPressed: this.restOrJob

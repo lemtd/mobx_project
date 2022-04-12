@@ -14,24 +14,20 @@ abstract class HomeStoreBase with Store {
   @action
   void incrementTimeToJob() {
     timeToJob++;
-    print("job: $timeToJob");
   }
 
   @action
   void decrementTimeToJob() {
     timeToJob--;
-    print("job: $timeToJob");
   }
 
   @action
   void incrementTimeToRest() {
     timeToRest++;
-    print("rest: $timeToRest");
   }
 
   @action
   void decrementTimeToRest() {
     timeToRest--;
-    print("rest: $timeToRest");
   }
 }
